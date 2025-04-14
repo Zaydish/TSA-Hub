@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TSA-Hub/static/css/main.96eeb577.css",
+    "main.js": "/TSA-Hub/static/js/main.ebb926fd.js",
+    "index.html": "/TSA-Hub/index.html",
+    "main.96eeb577.css.map": "/TSA-Hub/static/css/main.96eeb577.css.map",
+    "main.ebb926fd.js.map": "/TSA-Hub/static/js/main.ebb926fd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96eeb577.css",
+    "static/js/main.ebb926fd.js"
+  ]
+}

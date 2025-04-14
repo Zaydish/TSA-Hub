@@ -5,7 +5,6 @@ const MeetingArchive = () => {
     <div className="p-8">
       <h2 className="text-2xl font-bold mb-4">Meeting Archive</h2>
       <p>Here you'll find summaries or notes from past meetings.</p>
-      {/* Add PDF links or summaries here */}
     </div>
   );
 };

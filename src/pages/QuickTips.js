@@ -8,7 +8,6 @@ const QuickTips = () => {
         <li>Bring a water bottle to every conference 🧃</li>
         <li>Have your portfolio in Google Docs for easy edits ✍️</li>
         <li>Join GroupMe or Discord for reminders 🔔</li>
-        {/* Add more tips as needed */}
       </ul>
     </div>
   );

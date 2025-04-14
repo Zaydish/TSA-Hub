@@ -1,9 +1,7 @@
-/* Home.css */
-
 /* Overall container style */
 .home-container {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9; /* Light background color */
+    background-color: #f4f4f9;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -11,14 +9,14 @@
   
   /* Heading styles */
   h1 {
-    color: #1e3a8a; /* Dark blue color */
+    color: #1e3a8a;
     text-align: center;
     margin-bottom: 20px;
   }
   
   /* Calendar section styles */
   .calendar-section {
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -26,11 +24,11 @@
   }
   
   .calendar-section h2 {
-    color: #4b5563; /* Dark gray */
+    color: #4b5563;
     margin-bottom: 10px;
   }
   
-  /* Info section styles */
+
   .info-section {
     display: flex;
     justify-content: space-between;
@@ -47,7 +45,7 @@
   }
   
   .info-box h2 {
-    color: #1e3a8a; /* Blue color */
+    color: #1e3a8a;
     margin-bottom: 10px;
   }
   
@@ -57,13 +55,13 @@
   }
   
   .info-box ul li {
-    color: #374151; /* Dark gray */
+    color: #374151;
     margin-bottom: 8px;
   }
   
-  /* Button style */
+ 
   button {
-    background-color: #1e3a8a; /* Blue color */
+    background-color: #1e3a8a;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -74,5 +72,5 @@
   }
   
   button:hover {
-    background-color: #3b82f6; /* Lighter blue on hover */
+    background-color: #3b82f6;
   }  

@@ -33,7 +33,6 @@ const Rubrics = () => {
             </ul>
           </div>
 
-          {/* Add more rubrics as needed */}
         </div>
       </div>
     </div>

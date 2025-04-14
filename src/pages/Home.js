@@ -16,9 +16,8 @@ const Home = () => {
         <h1 className="text-4xl font-bold text-black mr-4">Welcome, Jace!</h1>
       </header>
 
-      {/* Main Content Layout */}
+      {/* Main Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Upcoming Events and Meetings Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-md w-full md:w-96">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">Upcoming Events</h2>
@@ -29,11 +28,10 @@ const Home = () => {
               firstDayOfWeek={0}
             />
           </div>
-
+            {/* Meetings */}
           <div className="bg-white p-6 rounded-lg shadow-md w-full">
             <h2 className="text-2xl font-semibold mb-4 text-gray-800">Meetings</h2>
             <div className="grid grid-cols-1 gap-8">
-              {/* Officer Meetings */}
               <div className="bg-gray-50 p-4 rounded-lg shadow-sm flex items-center justify-between">
                 <div>
                   <h4 className="text-lg font-semibold text-blue-600">Officer Meetings</h4>
@@ -44,7 +42,6 @@ const Home = () => {
                 </button>
               </div>
 
-              {/* General Meetings */}
               <div className="bg-gray-50 p-4 rounded-lg shadow-sm flex items-center justify-between">
                 <div>
                   <h4 className="text-lg font-semibold text-blue-600">General Meetings</h4>

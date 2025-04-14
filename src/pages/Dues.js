@@ -9,7 +9,7 @@ const Dues = () => {
           <h1 className="text-5xl font-bold text-black">Dues</h1>
         </header>
 
-        {/* Dues Content */}
+        {/* Dues */}
         <div className="flex-1 grid grid-cols-1 gap-12">
           {/* SLC Dues */}
           <div className="bg-white p-8 rounded-lg shadow-md">

@@ -1,0 +1,52 @@
+.dues-container {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .dues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .due-card {
+    background-color: #f0f4f8;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .pay-button,
+  .signup-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .pay-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .signup-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .pay-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .signup-button:hover {
+    background-color: #1e7e34;
+  }  

@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/TSA-Hub/static/css/main.26a15e0b.css",
-    "main.js": "/TSA-Hub/static/js/main.ff100e02.js",
+    "main.css": "/TSA-Hub/static/css/main.935542ae.css",
+    "main.js": "/TSA-Hub/static/js/main.792437cf.js",
     "index.html": "/TSA-Hub/index.html",
-    "main.26a15e0b.css.map": "/TSA-Hub/static/css/main.26a15e0b.css.map",
-    "main.ff100e02.js.map": "/TSA-Hub/static/js/main.ff100e02.js.map"
+    "main.935542ae.css.map": "/TSA-Hub/static/css/main.935542ae.css.map",
+    "main.792437cf.js.map": "/TSA-Hub/static/js/main.792437cf.js.map"
   },
   "entrypoints": [
-    "static/css/main.26a15e0b.css",
-    "static/js/main.ff100e02.js"
+    "static/css/main.935542ae.css",
+    "static/js/main.792437cf.js"
   ]
 }

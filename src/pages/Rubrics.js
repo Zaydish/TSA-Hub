@@ -1,39 +1,37 @@
-import React from "react";
+import React from 'react';
 
 const Rubrics = () => {
+  const rubrics = [
+    {
+      title: "Manufacturing Prototype",
+      file: "HS - Manufacturing Prototype.pdf",
+      description: "Design and fabricate a product using CNC/CIM technologies. Includes documentation and a functional prototype.",
+    },
+    {
+      title: "VR Simulation",
+      file: "HS - VR Simulation.pdf",
+      description: "Create an immersive virtual reality experience that addresses a real-world issue or topic using simulation technology.",
+    }
+  ];
+
   return (
-    <div className="flex-1 p-8">
-      {/* Header */}
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold text-black">Rubrics</h1>
-      </header>
-
-      {/* Rubrics Content */}
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold mb-4">Event Rubrics</h2>
-
-        <div className="space-y-6">
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold">Software Development</h3>
-            <ul className="list-disc pl-6">
-              <li>Code quality and readability</li>
-              <li>Functionality and performance</li>
-              <li>User interface and experience</li>
-              <li>Documentation and presentation</li>
-            </ul>
+    <div className="p-8">
+      <h1 className="text-3xl font-bold mb-6">Rubrics</h1>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {rubrics.map((rubric, index) => (
+          <div key={index} className="bg-white shadow-lg rounded-lg p-6">
+            <h2 className="text-xl font-semibold mb-2">{rubric.title}</h2>
+            <p className="mb-4 text-gray-600">{rubric.description}</p>
+            <a
+              href={`/rubrics/${rubric.file}`}
+              download
+              className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200"
+            >
+              Download Rubric
+            </a>
           </div>
-
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold">Digital Video Production</h3>
-            <ul className="list-disc pl-6">
-              <li>Creativity and originality</li>
-              <li>Storytelling and pacing</li>
-              <li>Visual quality and editing</li>
-              <li>Audio and sound design</li>
-            </ul>
-          </div>
-
-        </div>
+        ))}
       </div>
     </div>
   );

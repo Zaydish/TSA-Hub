@@ -1,30 +1,32 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+// Page imports (must match file names exactly)
 import Home from "./pages/Home";
 import Dues from "./pages/Dues";
 import EventInfo from "./pages/EventInfo";
-import Rubrics from "./pages/Rubrics";
-import MeetingArchive from "./pages/MeetingArchive"; // ✅ New
-import QuickTips from "./pages/QuickTips";           // ✅ New
+import Awards from "./pages/Awards";
+import Feedback from "./pages/Feedback";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="flex">
-        <Sidebar />
-        <div className="flex-1">
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dues" element={<Dues />} />
-            <Route path="/event-info" element={<EventInfo />} />
-            <Route path="/rubrics" element={<Rubrics />} />
-            <Route path="/meeting-archive" element={<MeetingArchive />} /> {/* ✅ New */}
-            <Route path="/quick-tips" element={<QuickTips />} />           {/* ✅ New */}
+            <Route path="/eventinfo" element={<EventInfo />} />
+            <Route path="/awards" element={<Awards />} />
+            <Route path="/feedback" element={<Feedback />} />
           </Routes>
-        </div>
+        </main>
+        <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 };
 

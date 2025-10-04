@@ -1,11 +1,42 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import confetti from "canvas-confetti";
 
 const Awards = () => {
   useEffect(() => {
     AOS.init({ duration: 800 });
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
   }, []);
+
+  const finalists = [
+    "Architectural Design",
+    "Audio Podcasting",
+    "Biotechnology Design",
+    "Chapter Team",
+    "Children’s Stories",
+    "CAD Engineering (Elliot)",
+    "Electrical Applications (Shiloh)",
+    "Engineering Design",
+    "Fashion Design and Technology",
+    "Photographic Technology (Sarim)",
+    "Prepared Presentation (Katie)",
+    "Robotics",
+    "Technical Problem Solving",
+    "Video Game Design",
+  ];
+
+  const winners = [
+    { place: "3rd", event: "Data Science and Analytics" },
+    { place: "2nd", event: "Debating Technical Issues" },
+    { place: "3rd", event: "Electrical Applications (Aditya)" },
+    { place: "2nd", event: "Future Technology Teacher (Jennah)" },
+    { place: "9th", event: "Outstanding Chapter" },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-100 px-6 py-10">
@@ -15,36 +46,48 @@ const Awards = () => {
       </div>
 
       {/* SLC 2025 */}
-      <div className="bg-white p-6 rounded-xl shadow mb-8" data-aos="fade-up">
-        <h2 className="text-2xl font-semibold mb-3 text-blue-800">SLC 2025</h2>
-        <p className="text-lg mb-4">🏅 PRHS TSA placed <strong>9th in the state</strong>!</p>
-        
-        <p className="font-semibold mb-2 text-blue-700">Finalists (Top 10):</p>
-        <ul className="list-disc pl-6 space-y-1 text-gray-800">
-          <li>Architectural Design</li>
-          <li>Audio Podcasting</li>
-          <li>Biotechnology Design</li>
-          <li>Chapter Team</li>
-          <li>Children’s Stories</li>
-          <li>CAD Engineering (Elliot)</li>
-          <li>Electrical Applications (Shiloh)</li>
-          <li>Engineering Design</li>
-          <li>Fashion Design and Technology</li>
-          <li>Photographic Technology (Sarim)</li>
-          <li>Prepared Presentation (Katie)</li>
-          <li>Robotics</li>
-          <li>Technical Problem Solving</li>
-          <li>Video Game Design</li>
-        </ul>
+      <div className="bg-white p-6 rounded-xl shadow mb-12" data-aos="fade-up">
+        <h2 className="text-2xl font-semibold mb-4 text-blue-800">SLC 2025</h2>
+        <p className="text-lg mb-6 text-blue-600">🏅 PRHS TSA placed <strong>9th in the state</strong>!</p>
 
-        <p className="font-semibold mt-6 mb-2 text-green-700">🏆 Winners:</p>
-        <ul className="list-disc pl-6 space-y-1 text-gray-800">
-          <li><strong className="text-green-700">3rd Place</strong> – Data Science and Analytics</li>
-          <li><strong className="text-green-700">2nd Place</strong> – Debating Technical Issues</li>
-          <li><strong className="text-green-700">3rd Place</strong> – Electrical Applications (Aditya)</li>
-          <li><strong className="text-green-700">2nd Place</strong> – Future Technology Teacher (Jennah)</li>
-          <li><strong className="text-green-700">9th Place</strong> – Outstanding Chapter</li>
-        </ul>
+        <h3 className="text-xl font-semibold mb-2 text-blue-700">Top 10 Finalists</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          {finalists.map((event, index) => (
+            <div
+              key={index}
+              className="bg-blue-50 border-l-4 border-blue-500 dark:bg-gray-800 p-4 rounded shadow"
+              data-aos="fade-up"
+              data-aos-delay={index * 30}
+            >
+              <p className="text-blue-900 dark:text-white font-medium">{event}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">Finalist (Top 10)</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-xl font-semibold mb-2 text-green-700">🏆 Winners</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {winners.map((winner, index) => {
+            const placeColor =
+              winner.place === "1st"
+                ? "bg-yellow-100 border-yellow-500"
+                : winner.place === "2nd"
+                ? "bg-gray-200 border-gray-500"
+                : "bg-amber-100 border-amber-500";
+            return (
+              <div
+                key={index}
+                className={`border-l-4 p-4 rounded shadow ${placeColor}`}
+                data-aos="zoom-in"
+                data-aos-delay={index * 50}
+              >
+                <p className="text-lg font-bold text-green-800">
+                  {winner.place} Place – {winner.event}
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       {/* SLC 2024 */}

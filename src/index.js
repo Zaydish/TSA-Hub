@@ -1,9 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './styles/tailwind.css';  // Import your TailwindCSS file
-import App from './App';
-document.title = "PRHS TSA Hub";
+// src/index.js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import { AuthProvider } from "./context/AuthContext";
+import { MyEventsProvider } from "./context/MyEventsContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <AuthProvider>
+      <MyEventsProvider>
+        <App />
+      </MyEventsProvider>
+    </AuthProvider>
+  </React.StrictMode>
+);
 
+// 🚫 Service worker disabled to ensure fresh deploys — no caching issues
